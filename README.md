@@ -4,6 +4,15 @@
 
 마트 물건들을 온라인으로 구매할 수 있는 서비스입니다.
 
+### ERD
+![image](https://github.com/hyeonjeong9911/MarketSNOW/assets/127717572/b034a041-da6d-4934-affe-1f935ed5af20)
+
+### 사용 기술 스택
+* SpringBoot
+* Java
+* MYSQL
+* JPA
+  
 ### 프로젝트 기능
 * 회원가입 기능
   * 일반적으로 모든 사용자는 회원가입시 USER 권한을 가진다.
