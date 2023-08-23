@@ -5,7 +5,7 @@
 마트 물건들을 온라인으로 구매할 수 있는 서비스입니다.
 
 ### ERD
-![image](https://github.com/hyeonjeong9911/MarketSNOW/assets/127717572/b034a041-da6d-4934-affe-1f935ed5af20)
+![image](https://github.com/hyeonjeong9911/MarketSNOW/assets/127717572/7c1cc9a2-359c-4bb7-b80f-6b13a4332070)
 
 ### 사용 기술 스택
 * SpringBoot
