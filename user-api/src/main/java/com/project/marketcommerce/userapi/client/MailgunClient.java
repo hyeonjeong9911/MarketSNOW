@@ -1,7 +1,6 @@
 package com.project.marketcommerce.userapi.client;
 
 import com.project.marketcommerce.userapi.client.mailgun.SendMailForm;
-import feign.Response;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.SpringQueryMap;
