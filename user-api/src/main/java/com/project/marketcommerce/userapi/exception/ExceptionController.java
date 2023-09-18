@@ -18,13 +18,15 @@ public class ExceptionController {
   })
   public ResponseEntity<ExceptionResponse> customRequestException(final CustomException c) {
     log.warn("api Exception : {}", c.getErrorCode());
-    return ResponseEntity.badRequest().body(new ExceptionResponse(c.getMessage(), c.getErrorCode()));
+    return ResponseEntity.badRequest()
+        .body(new ExceptionResponse(c.getMessage(), c.getErrorCode()));
   }
 
   @Getter
   @ToString
   @AllArgsConstructor
   public static class ExceptionResponse {
+
     private String message;
     private ErrorCode errorCode;
   }

@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SignUpForm {
+
   private String user_name;
   private String phone_number;
   private LocalDate birth;

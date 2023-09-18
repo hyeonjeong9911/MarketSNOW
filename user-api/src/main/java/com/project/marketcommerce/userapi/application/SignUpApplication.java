@@ -15,28 +15,30 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class SignUpApplication {
+
   private final MailgunClient mailgunClient;
   private final SignUpCustomerService signUpCustomerService;
 
   public void customerVerify(String email, String code) {
     signUpCustomerService.verifyEmail(email, code);
   }
+
   public String customerSignUp(SignUpForm form) {
 
     if (signUpCustomerService.isEmailExist(form.getEmail())) {
       throw new CustomException(ErrorCode.ALREADY_REGISTER_USER);
       // exception
-    } else  {
+    } else {
       Customer c = signUpCustomerService.signUp(form);
       LocalDateTime now = LocalDateTime.now();
 
       String code = getRandomCode();
       SendMailForm sendMailForm = SendMailForm.builder()
-              .from("marketCommerce_test@mytester.com")
-              .to(form.getEmail())
-              .subject("Verification Email")
-              .text(getVerificationEmailBody(c.getEmail(), c.getUser_name(), code))
-                      .build();
+          .from("marketCommerce_test@mytester.com")
+          .to(form.getEmail())
+          .subject("Verification Email")
+          .text(getVerificationEmailBody(c.getEmail(), c.getUser_name(), code))
+          .build();
       mailgunClient.sendEmail(sendMailForm);
       signUpCustomerService.changeCustomerValidateEmail(c.getId(), code);
       return "회원 가입에 성공하였습니다.";

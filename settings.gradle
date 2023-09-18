@@ -1,0 +1,5 @@
+rootProject.name = 'marketCommerce'
+include 'user-api'
+include 'marketcommerce-domain'
+
+

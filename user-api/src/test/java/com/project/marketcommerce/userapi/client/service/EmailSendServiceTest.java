@@ -14,7 +14,7 @@ class EmailSendServiceTest {
   @Test
   public void EmailTest() {
 
-    String response  = emailSendService.sendEmail();
+    String response = emailSendService.sendEmail();
     System.out.println(response);
   }
 }
